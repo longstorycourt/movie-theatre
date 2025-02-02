@@ -4,43 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wonderland Movie Theatre</title>
-    <!-- <link rel="stylesheet" href="wonderland-style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Tangerine:wght@400;700&display=swap" rel="stylesheet"> -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="/node_modules/bootstrap/dist/js/bootstrap.min.js" rel="stylesheet" >
 </head>
-<body>
-    <header>
-        <h1 class="berkshire-swash-regular">Wonderland Movie Theatre</h1>
-        <p class="subheading tangerine-regular">・。.・゜。Hop in for the best movie experience!.・。.・゜・</p>
+<body class="bg-dark text-white">
+    <header class="container-fluid bg-dark text-white text-center py-3">
+        <h1 class="display-4">Wonderland Movie Theatre</h1>
+        <p class="lead">・。.・゜。Hop in for the best movie experience!.・。.・゜・</p>
     </header>
-    <div class="nav-bar">
-        <nav>
-            <ul>
-                <li  class="nav-bar"><a href="#now-playing">NOW PLAYING</a></li>
-                <li  class="nav-bar" href="#">COMING SOON</li>
-                <li  class="nav-bar" href="#">GET TICKETS</li>
-                <li  class="nav-bar" href="#">MERCHANDISE</li>
-                <li  class="nav-bar"><a href="#contact-us">CONTACT US</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="movies-display">
-        <iframe width="420" height="315"
-        src="https://www.youtube.com/embed/gCUg6Td5fgQ?autoplay=1&mute=1&loop=1&playlist=gCUg6Td5fgQ" frameborder="0">
-        </iframe>
-        <iframe width="420" height="315"
-        src="https://www.youtube.com/embed/pqi45Qhq3CI?autoplay=1&mute=1&loop=1&playlist=pqi45Qhq3CI"frameborder="0">
-        </iframe>
-        <iframe width="420" height="315"
-        src="https://www.youtube.com/embed/hDZ7y8RP5HE?autoplay=1&mute=1&loop=1&playlist=hDZ7y8RP5HE"frameborder="0">
-        </iframe>
-    </div>
-    <hr class="solid">
-    <div class="now-playing">
-        <h2 id="now-playing">.・。.・゜✭・.・✫・゜・。..・。.・゜✭・.・✫・゜・。.<span class="heading">Now Playing</span>.・。.・゜✭・.・✫・゜・。..・。.・゜✭・.・✫・゜・。.</h2>
-        <table>
-            <thead>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">Wonderland</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#now-playing">Now Playing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Coming Soon</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Get Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Merchandise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <iframe class="w-100" height="200" src="https://www.youtube.com/embed/gCUg6Td5fgQ?autoplay=1&mute=1&loop=1&playlist=gCUg6Td5fgQ" frameborder="0"></iframe>
+            </div>
+            <div class="col-md-4">
+                <iframe class="w-100" height="200" src="https://www.youtube.com/embed/pqi45Qhq3CI?autoplay=1&mute=1&loop=1&playlist=pqi45Qhq3CI" frameborder="0"></iframe>
+            </div>
+            <div class="col-md-4">
+                <iframe class="w-100" height="200" src="https://www.youtube.com/embed/hDZ7y8RP5HE?autoplay=1&mute=1&loop=1&playlist=hDZ7y8RP5HE" frameborder="0"></iframe>
+            </div>
+        </div>
+        <hr>
+        <h2 id="now-playing" class="text-center my-4">Now Playing</h2>
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark text-center">
                 <tr>
                     <th>Movie ID</th>
                     <th>Poster</th>
@@ -49,109 +53,76 @@
                     <th>Description</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-dark text-center">
                 <tr>
                     <td>001</td>
-                    <td class="tdposter"><img class="poster" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7jkWtq3tzA6uvRhhwwD5mfr9_Pt4l-Tk-JLYWUwfvwOEcXOwN" alt="LOTR poster" ></td>
-                    <td class="movie-title"><a target="_blank" href="https://www.youtube.com/watch?v=gCUg6Td5fgQ">Lord Of The Rings: The War Of The Rohirrim</a></td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7jkWtq3tzA6uvRhhwwD5mfr9_Pt4l-Tk-JLYWUwfvwOEcXOwN" class="img-thumbnail" alt="LOTR poster" width="150" ></td>
+                    <td><a class="text-white" href="https://www.youtube.com/watch?v=gCUg6Td5fgQ" target="_blank">Lord Of The Rings: The War Of The Rohirrim</a></td>
                     <td>50</td>
-                    <td class="description">A sudden attack by Wulf, a ruthless Dunlending lord, forces Helm Hammerhand and his people to make a daring last stand in the ancient stronghold of the Hornburg. Finding herself in an increasingly desperate situation, Helm's daughter, Héra, must lead the resistance against a deadly enemy who's intent on total destruction.</td>
+                    <td>A sudden attack by Wulf, a ruthless Dunlending lord, forces Helm Hammerhand and his people to make a daring last stand in the ancient stronghold of the Hornburg. Finding herself in an increasingly desperate situation, Helm's daughter, Héra, must lead the resistance against a deadly enemy who's intent on total destruction.</td>
                 </tr>
-                
                 <tr>
                     <td>002</td>
-                    <td class="tdposter"><img class="poster" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8h6Y2P0OWu2Qq5KSrm-HBJ9sCEBeCH9ZYaE8_fWQDMGFGjTa6" alt="Wicked poster"></td>
-                    <td class="movie-title "><a href="https://youtu.be/6COmYeLsz4c?si=E7HgpJPFmMEjPgrU" title="Wicked 2 Trailer">Wicked</a></td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8h6Y2P0OWu2Qq5KSrm-HBJ9sCEBeCH9ZYaE8_fWQDMGFGjTa6" class="img-thumbnail" alt="Wicked poster" width="150"></td>
+                    <td><a class="text-white" href="https://youtu.be/6COmYeLsz4c" target="_blank">Wicked</a></td>
                     <td>30</td>
-                    <td class="description">Misunderstood because of her green skin, a young woman named <b>Elphaba</b> forges an unlikely but profound friendship with <b>Glinda</b>, a student with an unflinching desire for popularity. Following an encounter with the Wizard of Oz, their relationship soon reaches a crossroad as their lives begin to take very different paths.</td>
+                    <td>Misunderstood because of her green skin, a young woman named <b>Elphaba</b> forges an unlikely but profound friendship with <b>Glinda</b>, a student with an unflinching desire for popularity. Following an encounter with the Wizard of Oz, their relationship soon reaches a crossroad as their lives begin to take very different paths.</td>
                 </tr>
                 <tr>
                     <td>003</td>
-                    <td class="tdposter"><img class="poster" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRc35OBsYaT5o0GrpVKw3ueXDTnbpq5GRdaaSlyl_erdCLA9NE2" alt="Moana 2 poster" width="100em"></td>
-                    <td class="movie-title"><a href="https://youtu.be/hDZ7y8RP5HE?si=JIwr87CKOUED04_Q" target="_blank" title="Moana 2 Trailer">Moana 2</td>
+                    <td><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRc35OBsYaT5o0GrpVKw3ueXDTnbpq5GRdaaSlyl_erdCLA9NE2" class="img-thumbnail" alt="Moana 2 poster" width="150"></td>
+                    <td><a class="text-white" href="https://youtu.be/hDZ7y8RP5HE" target="_blank">Moana 2</a></td>
                     <td>20</td>
-                    <td class="description" >After receiving an unexpected call from her wayfinding ancestors, <b>Moana</b> must journey to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.</td>
+                    <td>After receiving an unexpected call from her wayfinding ancestors, <b>Moana</b> must journey to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.</td>
                 </tr>
             </tbody>
         </table>
-    </div>
-    <hr class="solid">
-    <div class="top-films">
-        <div class="top-films-display-left">
-            <iframe  width="400" height="300"
-        src="https://www.youtube.com/embed/LEjhY15eCx0?autoplay=1&mute=1&loop=1&playlist=LEjhY15eCx0" frameborder="0">
-        </iframe>
-        </div>
-        <div class="left">
-            <h2>Top 5 Films of 2024</h2>
-            <ol>
-                <li class="top-movies">Inside Out 2</li>
-                <li class="top-movies">Deadpool & Wolverine</li>
-                <li class="top-movies">Despicable Me 4</li>
-                <li class="top-movies">Dune: Part 2</li>
-                <li class="top-movies">Moana 2</li>
-            </ol>
-            <p><cite><a href="https://www.boxofficemojo.com/year/world/" title="Box Office Mojo's Worldwide Box Office">2024 Worldwide Box Office</a></cite> by Box Office Mojo</p>
-        </div>
-        <div class="right">
-            <h2>Upcoming Films of 2025</h2>
-            <ol>
-                <li class="top-movies">Mission: Impossible - The Final Reckoning</li>
-                <li class="top-movies">Avatar: Fire and Ash</li>
-                <li class="top-movies">Thunderbolts</li>
-                <li class="top-movies">Jurassic World Rebirth</li>
-                <li class="top-movies">The Fantastic Four: First Steps</li>
-            </ol>
-            <p><cite><a href="https://www.imdb.com/list/ls579577759/" title="IMDb's Upcoming Movies 2025">Upcoming Movies 2025</a></cite> by IMDb</p>
-        </div>
-
-        <div class="top-films-display-right">
-            <iframe width="400" height="300"
-        src="https://www.youtube.com/embed/NOhDyUmT9z0?autoplay=1&mute=1&loop=1&playlist=NOhDyUmT9z0" frameborder="0">
-        </iframe>
-        </div>
-    </div>
-    
-    <footer>
-        <hr class="solid">
-        <div class="footer">
-            <div class="about-us">
-                <h3 class="About Us">About Us</h3>
-                <p><b>Wonderland theatre</b> is the place we go for magic, where stories feel perfect and powerful on a huge silver screen. Celebrate the movies and immerse yourself in <i>Hollywood</i> with the latest movie trailers, clips, celebrity interviews and more. Subscribe to our newsletter to get immediate notifications!</p>
-                <form id="newsletter" action="" method="get">
-                    <fieldset class="newsletter-options">
-                        <legend>Subscribe to our newsletter:</legend>
-                        <label for="news-email">Email:</label><input id="news-email" type="email" required><br /><br />
-                        <label>Select the type of information you'd like to receive: </label><br />
-                        <input type="checkbox" id="new-release" name="newsletter-options" value="1" />
-                        <label for="new-release">New released movies</label><br />
-                        <input type="checkbox" id="promotions" name="newsletter-options" value="2" />
-                        <label for="promotions">Promotions</label><br />
-                        <input type="checkbox" id="events" name="newsletter-options" value="3" />
-                        <label for="events">Events</label><br />
-                        <input type="checkbox" id="all-options" onclick="toggle(this)" name="newsletter-options" value="4" />
-                        
-                        <label for="all-options" >All</label>
-                        <input id="submitBtn" type="submit" value="Subscribe!" />
-                    </fieldset>
-                    <label id="numOfSubs">Number of subscribers: <span id="counter">12345</span></label>
-                </form>
-                      
+        <hr>
+        <div class="row text-center my-4">
+            <div class="col-md-4">
+                <h2>Top 5 Films of 2024</h2>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item bg-dark text-white">Inside Out 2</li>
+                    <li class="list-group-item bg-dark text-white">Deadpool & Wolverine</li>
+                    <li class="list-group-item bg-dark text-white">Despicable Me 4</li>
+                    <li class="list-group-item bg-dark text-white">Dune: Part 2</li>
+                    <li class="list-group-item bg-dark text-white">Moana 2</li>
+                </ol>
             </div>
-            <div class="contact-us">
-                <h3 id="contact-us">Contact Us</h3>
-                <address>
-                    <p>Phone <span class="address"><a href="tel:+85512345678" title="Call us.">+855 12 345 678</a></span></p>
-                    <p>Website <span class="address"><a href="www.wonderlandtheatre.com" title="Visit our website.">www.wonderlandtheatre.com</a></span></p>
-                    <p>Email <span class="address"><a href="mailto:info@wonderlandtheatre.com" title="Email us.">info@wonderlandtheatre.com</a></span></p>
-                    <p>Address <span class="address"><a href="https://g.co/kgs/Fng9pB7" title="Find us."> N123, St12, Khan Sen Sok, Phnom Penh, Cambodia</a></span></p>
-                </address> 
+            <div class="col-md-4">
+                <h2>Upcoming Films of 2025</h2>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item bg-dark text-white">Mission: Impossible - The Final Reckoning</li>
+                    <li class="list-group-item bg-dark text-white">Avatar: Fire and Ash</li>
+                    <li class="list-group-item bg-dark text-white">Thunderbolts</li>
+                    <li class="list-group-item bg-dark text-white">Jurassic World Rebirth</li>
+                    <li class="list-group-item bg-dark text-white">The Fantastic Four: First Steps</li>
+                </ol>
+            </div>
+            <div class="col-md-4">
+                <iframe width="400" height="300"
+            src="https://www.youtube.com/embed/NOhDyUmT9z0?autoplay=1&mute=1&loop=1&playlist=NOhDyUmT9z0" frameborder="0">
+            </iframe>
             </div>
         </div>
-
-    <hr class="solid">
-    <p class="copyright">© Wonderland Theatre</p>
-    </footer>
-<!-- <script src="wonderland.js"></script> -->
+    </div>
 </body>
+<hr>
+<footer>
+    <div class="row text-center py-4">
+        <div class="col-md-6">
+            <h3>About Us</h3>
+            <p>Wonderland Theatre is the place we go for magic, where stories feel perfect and powerful on a huge silver screen. Celebrate the movies and immerse yourself in <i>Hollywood</i> with the latest movie trailers, clips, celebrity interviews and more. Subscribe to our newsletter to get immediate notifications!</p>
+        </div>
+        <div class="col-md-6">
+            <h3 id="contact-us">Contact Us</h3>
+            <address>
+                <p>Phone: <a href="tel:+85512345678" class="text-white">+855 12 345 678</a></p>
+                <p>Email: <a href="mailto:info@wonderlandtheatre.com" class="text-white">info@wonderlandtheatre.com</a></p>
+                <p>Website: <a href="www.wonderlandtheatre.com" class="text-white">www.wonderlandtheatre.com</a></p>
+            </address>
+        </div>
+    </div>
+    <p class="mt-4 text-center">© Wonderland Theatre</p>
+</footer>
 </html>
